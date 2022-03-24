@@ -17,4 +17,20 @@ print('Correct!')
 
 # Homework: extend the above program so that:
 #   1) it generates a number between 1 and 100,
+
+from random import randint
+
+number = randint(1,100)
+print(number)
+
+guess = int(input('Guess a number between 1 and 100:'))
+
 #   2) it gives higher/lower feedback on an incorrect guess.
+while number != guess:
+    if guess < number:
+        print("your guess is too low")
+        guess = int(input('Try again: '))
+    elif guess > number:
+        print("your guess is too high")
+        guess = int(input('Try again: '))
+print("Correct!")
