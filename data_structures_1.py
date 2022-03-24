@@ -47,7 +47,24 @@ print(participants_array.mean(axis=0))
 
 # Homework exercise:
 #   1) Import the log function from the math package (built-in)
+from math import log
+
 #   2) Try to calculate the log-RTs (the logarithm of each reaction time), using:
 #      - the three separate RT lists (hint: you may need to use several for-loops)
+for RT in participant_1_RTs:
+    print(log(RT))
+
+for RT in participant_2_RTs:
+    print(log(RT))
+
+for RT in participant_3_RTs:
+    print(log(RT))
+
 #      - the participants list of lists (hint: two for-loops should be enough here!)
+for participant in participants:
+    for RT in participant:
+        print(log(RT))
+
 #      - the participants array in numpy (hint: use np.log instead of Python's log function)
+for participant in participants_array:
+    print(np.log(participant))
